@@ -11,6 +11,25 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+def line_plot():
+    # Generaremos la función y=X^2 (x al cuadrado)
+    x = range(-10, 11, 1)
+    y = []
+    for i in x:
+        y.append(i**2)
+
+    fig = plt.figure()
+    fig.suptitle('Grafico Ejemplo 1 Y=X**2', fontsize=12)
+    ax = fig.add_subplot()
+
+    ax.plot(x, y, c='darkgreen', marker='^', label='función:y=x**2')
+    ax.legend()
+    ax.grid()
+    ax.set_facecolor('whitesmoke')
+    plt.show()
+
+
+
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
@@ -34,5 +53,7 @@ if __name__ == '__main__':
     # Darle color a la línea a su elección
 
     # Crear acá su gráfico
+
+    line_plot()
 
     print("terminamos")
